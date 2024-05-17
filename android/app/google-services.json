@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "307339320309",
+    "project_id": "prioritysofttest",
+    "storage_bucket": "prioritysofttest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307339320309:android:86df61b3c82a80dfa65ebc",
+        "android_client_info": {
+          "package_name": "com.example.priority_soft_test"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvLTVqMjPjWcOt5kyZEi9KYR6tg8H0BNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
