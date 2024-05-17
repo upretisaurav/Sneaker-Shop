@@ -53,8 +53,68 @@ During the development phase, one of the significant challenges encountered was 
 
 ---
 
-## App Showcase Video
+## App Showcase
 
-[Click here to watch the app showcase video](assets/video/app_showcase.mov)
+### Video Demonstration
+
+[![App Showcase Video](https://img.youtube.com/vi/ga53op1yx4k/0.jpg)](https://youtube.com/shorts/ga53op1yx4k)
 
 Check out our app showcase video to see a demonstration of its features and functionalities in action!
+
+### App Showcase Image
+
+![App Showcase One](assets/images/app_showcase/add_to_cart.png)
+![App Showcase Two](assets/images/app_showcase/cart_screen.png)
+![App Showcase Three](assets/images/app_showcase/checkout_screen.png)
+![App Showcase Four](assets/images/app_showcase/discover_screen.png)
+![App Showcase Five](assets/images/app_showcase/product_detail.png)
+![App Showcase Six](assets/images/app_showcase/reviews_screen.png)
+
+Above are images showcasing our app's design and features.
+
+### Updated Reviews
+
+We've recently updated the app's reviews! Using a Python script, we've added 1045 new reviews to our database. Here's the script used:
+
+```python
+import firebase_admin
+from firebase_admin import credentials, firestore
+import random
+from faker import Faker
+import datetime
+import requests
+
+cred = credentials.Certificate("serviceaccountkey.json")
+firebase_admin.initialize_app(cred)
+db = firestore.client()
+
+fake = Faker()
+
+def generate_random_review():
+    user_name = fake.name()
+    rating = random.randint(1, 5)
+    comment = fake.paragraph()
+    profile_picture_url = get_random_profile_picture()
+    timestamp = datetime.datetime.now()
+    return {
+        "user_name": user_name,
+        "rating": rating,
+        "comment": comment,
+        "profile_picture_url": profile_picture_url,
+        "timestamp": timestamp
+    }
+
+def get_random_profile_picture():
+    response = requests.get("https://randomuser.me/api/?inc=picture")
+    data = response.json()
+    profile_picture_url = data["results"][0]['picture']['large']
+    return profile_picture_url
+    
+def populate_reviews():
+    for _ in range(1044):
+        review_data = generate_random_review()
+        db.collection("reviews").add(review_data)
+
+if __name__ == "__main__":
+    populate_reviews()
+
