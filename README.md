@@ -63,12 +63,15 @@ Check out our app showcase video to see a demonstration of its features and func
 
 ### App Showcase Image
 
-<img src="assets/images/app_showcase/add_to_cart.png" alt="App Showcase One" width="200"/>
-<img src="assets/images/app_showcase/cart_screen.png" alt="App Showcase Two" width="200"/>
-<img src="assets/images/app_showcase/checkout_screen.png" alt="App Showcase Three" width="200"/>
-<img src="assets/images/app_showcase/discover_screen.png" alt="App Showcase Four" width="200"/>
-<img src="assets/images/app_showcase/product_detail.png" alt="App Showcase Five" width="200"/>
-<img src="assets/images/app_showcase/reviews_screen.png" alt="App Showcase Six" width="200"/>
+<div style="display: flex; justify-content: center;">
+    <img src="assets/images/app_showcase/add_to_cart.png" alt="App Showcase One" width="200"/>
+    <img src="assets/images/app_showcase/cart_screen.png" alt="App Showcase Two" width="200"/>
+    <img src="assets/images/app_showcase/checkout_screen.png" alt="App Showcase Three" width="200"/>
+    <img src="assets/images/app_showcase/discover_screen.png" alt="App Showcase Four" width="200"/>
+    <img src="assets/images/app_showcase/product_detail.png" alt="App Showcase Five" width="200"/>
+    <img src="assets/images/app_showcase/reviews_screen.png" alt="App Showcase Six" width="200"/>
+</div>
+
 
 Above are images showcasing our app's design and features.
 
